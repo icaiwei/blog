@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WPF增删改查09-美化 | i采薇小楼</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+    <link rel="stylesheet" href="/blog//at.alicdn.com/t/font_3114978_qe0b39no76.css">
+    <noscript><meta http-equiv="refresh" content="0; url=https://www.ic-sugar.cn/noscript/"><style>.theme-vdoing-content { display:none }</noscript>
+    <script>var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?267c5680c2ffb468ca29c45ffe6801da"; 
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+          })();
+          </script>
+    <meta name="description" content="i采薇个人博客, VuePress搭建, 使用了 Vdoing 主题, 学习硬件，软件等相关知识, 记录生活和技术路程, 同时分享技巧。">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="keywords" content="i采薇个人博客, VuePress搭建, 学习Java、Web、框架、微服务、工具、前端等相关知识, 记录生活和技术路程。">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.a94e7ef0.css" as="style"><link rel="preload" href="/blog/assets/js/app.696f2bc2.js" as="script"><link rel="preload" href="/blog/assets/js/3.523b71e1.js" as="script"><link rel="preload" href="/blog/assets/js/236.9bdf5497.js" as="script"><link rel="preload" href="/blog/assets/js/182.d518a632.js" as="script"><link rel="preload" href="/blog/assets/js/154.53998938.js" as="script"><link rel="preload" href="/blog/assets/js/158.b2e74827.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.799551cb.js"><link rel="prefetch" href="/blog/assets/js/100.f547765b.js"><link rel="prefetch" href="/blog/assets/js/101.fde14355.js"><link rel="prefetch" href="/blog/assets/js/102.1f22bfcd.js"><link rel="prefetch" href="/blog/assets/js/103.b305b6ca.js"><link rel="prefetch" href="/blog/assets/js/104.c001b4e4.js"><link rel="prefetch" href="/blog/assets/js/105.e6b4d535.js"><link rel="prefetch" href="/blog/assets/js/106.53da7d71.js"><link rel="prefetch" href="/blog/assets/js/107.a93ffd45.js"><link rel="prefetch" href="/blog/assets/js/108.81b1e852.js"><link rel="prefetch" href="/blog/assets/js/109.5c5482a7.js"><link rel="prefetch" href="/blog/assets/js/11.b117f854.js"><link rel="prefetch" href="/blog/assets/js/110.41fab82e.js"><link rel="prefetch" href="/blog/assets/js/111.ef39de97.js"><link rel="prefetch" href="/blog/assets/js/112.29eb15a1.js"><link rel="prefetch" href="/blog/assets/js/113.a3e10a84.js"><link rel="prefetch" href="/blog/assets/js/114.5427ac2d.js"><link rel="prefetch" href="/blog/assets/js/115.bd7fa569.js"><link rel="prefetch" href="/blog/assets/js/116.e4656989.js"><link rel="prefetch" href="/blog/assets/js/117.eb2c4687.js"><link rel="prefetch" href="/blog/assets/js/118.95f858b6.js"><link rel="prefetch" href="/blog/assets/js/119.05f194cc.js"><link rel="prefetch" href="/blog/assets/js/12.fd9f3039.js"><link rel="prefetch" href="/blog/assets/js/120.ee97677a.js"><link rel="prefetch" href="/blog/assets/js/121.0f7369ea.js"><link rel="prefetch" href="/blog/assets/js/122.50cccc6a.js"><link rel="prefetch" href="/blog/assets/js/123.25a55b29.js"><link rel="prefetch" href="/blog/assets/js/124.ab3b28c5.js"><link rel="prefetch" href="/blog/assets/js/125.a7fc7660.js"><link rel="prefetch" href="/blog/assets/js/126.b4b4b0dc.js"><link rel="prefetch" href="/blog/assets/js/127.19158474.js"><link rel="prefetch" href="/blog/assets/js/128.2cc35652.js"><link rel="prefetch" href="/blog/assets/js/129.b303cc3d.js"><link rel="prefetch" href="/blog/assets/js/13.3ad5fd46.js"><link rel="prefetch" href="/blog/assets/js/130.ae42fb91.js"><link rel="prefetch" href="/blog/assets/js/131.566b15be.js"><link rel="prefetch" href="/blog/assets/js/132.1b2add8a.js"><link rel="prefetch" href="/blog/assets/js/133.f95f178a.js"><link rel="prefetch" href="/blog/assets/js/134.bee2d409.js"><link rel="prefetch" href="/blog/assets/js/135.d9670621.js"><link rel="prefetch" href="/blog/assets/js/136.255514d9.js"><link rel="prefetch" href="/blog/assets/js/137.f1763611.js"><link rel="prefetch" href="/blog/assets/js/138.dcbb8cff.js"><link rel="prefetch" href="/blog/assets/js/139.0e51b285.js"><link rel="prefetch" href="/blog/assets/js/14.70945ab3.js"><link rel="prefetch" href="/blog/assets/js/140.c09f65f9.js"><link rel="prefetch" href="/blog/assets/js/141.b3437ad6.js"><link rel="prefetch" href="/blog/assets/js/142.0da0d405.js"><link rel="prefetch" href="/blog/assets/js/143.8ba9903f.js"><link rel="prefetch" href="/blog/assets/js/144.80265923.js"><link rel="prefetch" href="/blog/assets/js/145.386052c5.js"><link rel="prefetch" href="/blog/assets/js/146.152a0418.js"><link rel="prefetch" href="/blog/assets/js/147.be5ec4ad.js"><link rel="prefetch" href="/blog/assets/js/148.f3be9e06.js"><link rel="prefetch" href="/blog/assets/js/149.f7e73aad.js"><link rel="prefetch" href="/blog/assets/js/15.ce259c0d.js"><link rel="prefetch" href="/blog/assets/js/150.57b28a79.js"><link rel="prefetch" href="/blog/assets/js/151.ccac4109.js"><link rel="prefetch" href="/blog/assets/js/152.e7a3a927.js"><link rel="prefetch" href="/blog/assets/js/153.5ef0119e.js"><link rel="prefetch" href="/blog/assets/js/155.00bde588.js"><link rel="prefetch" href="/blog/assets/js/156.3af5c17d.js"><link rel="prefetch" href="/blog/assets/js/157.4e6b1db6.js"><link rel="prefetch" href="/blog/assets/js/159.6c727f41.js"><link rel="prefetch" href="/blog/assets/js/16.38fde756.js"><link rel="prefetch" href="/blog/assets/js/160.215e8d23.js"><link rel="prefetch" href="/blog/assets/js/161.93c0eddb.js"><link rel="prefetch" href="/blog/assets/js/162.af361108.js"><link rel="prefetch" href="/blog/assets/js/163.1db79a67.js"><link rel="prefetch" href="/blog/assets/js/164.4334ec93.js"><link rel="prefetch" href="/blog/assets/js/165.9c0f6576.js"><link rel="prefetch" href="/blog/assets/js/166.ea4522e6.js"><link rel="prefetch" href="/blog/assets/js/167.60a8358e.js"><link rel="prefetch" href="/blog/assets/js/168.be4974a2.js"><link rel="prefetch" href="/blog/assets/js/169.04a51db3.js"><link rel="prefetch" href="/blog/assets/js/17.e3107d23.js"><link rel="prefetch" href="/blog/assets/js/170.0fe5a4c3.js"><link rel="prefetch" href="/blog/assets/js/171.2cd172c2.js"><link rel="prefetch" href="/blog/assets/js/172.79c009dd.js"><link rel="prefetch" href="/blog/assets/js/173.02546c3f.js"><link rel="prefetch" href="/blog/assets/js/174.67d3e2d8.js"><link rel="prefetch" href="/blog/assets/js/175.3b39a7d8.js"><link rel="prefetch" href="/blog/assets/js/176.e7689577.js"><link rel="prefetch" href="/blog/assets/js/177.ad23b5fb.js"><link rel="prefetch" href="/blog/assets/js/178.a2ca4819.js"><link rel="prefetch" href="/blog/assets/js/179.eba720b9.js"><link rel="prefetch" href="/blog/assets/js/18.b514c6c7.js"><link rel="prefetch" href="/blog/assets/js/180.80ba611b.js"><link rel="prefetch" href="/blog/assets/js/181.3da13ed2.js"><link rel="prefetch" href="/blog/assets/js/183.048ab1d4.js"><link rel="prefetch" href="/blog/assets/js/184.713e9cc4.js"><link rel="prefetch" href="/blog/assets/js/185.de4f8b8f.js"><link rel="prefetch" href="/blog/assets/js/186.f345f868.js"><link rel="prefetch" href="/blog/assets/js/187.e98c9fb0.js"><link rel="prefetch" href="/blog/assets/js/188.2acc88a7.js"><link rel="prefetch" href="/blog/assets/js/189.8b1bcddb.js"><link rel="prefetch" href="/blog/assets/js/19.975fdb6a.js"><link rel="prefetch" href="/blog/assets/js/190.f1f6f276.js"><link rel="prefetch" href="/blog/assets/js/191.0afde61f.js"><link rel="prefetch" href="/blog/assets/js/192.c4ad1db6.js"><link rel="prefetch" href="/blog/assets/js/193.6164f61b.js"><link rel="prefetch" href="/blog/assets/js/194.a297dcae.js"><link rel="prefetch" href="/blog/assets/js/195.435084b6.js"><link rel="prefetch" href="/blog/assets/js/196.a890fda2.js"><link rel="prefetch" href="/blog/assets/js/197.f3099119.js"><link rel="prefetch" href="/blog/assets/js/198.33bcb2fb.js"><link rel="prefetch" href="/blog/assets/js/199.d48be132.js"><link rel="prefetch" href="/blog/assets/js/2.1fdf5ba3.js"><link rel="prefetch" href="/blog/assets/js/20.54181450.js"><link rel="prefetch" href="/blog/assets/js/200.04469a5a.js"><link rel="prefetch" href="/blog/assets/js/201.4b21147b.js"><link rel="prefetch" href="/blog/assets/js/202.6192772c.js"><link rel="prefetch" href="/blog/assets/js/203.b684b12c.js"><link rel="prefetch" href="/blog/assets/js/204.ed2f4f13.js"><link rel="prefetch" href="/blog/assets/js/205.bc8dbf2d.js"><link rel="prefetch" href="/blog/assets/js/206.5c7ddd94.js"><link rel="prefetch" href="/blog/assets/js/207.7b126a0a.js"><link rel="prefetch" href="/blog/assets/js/208.5ce0d192.js"><link rel="prefetch" href="/blog/assets/js/209.8a20c2e4.js"><link rel="prefetch" href="/blog/assets/js/21.81784db5.js"><link rel="prefetch" href="/blog/assets/js/210.b1e8a4c7.js"><link rel="prefetch" href="/blog/assets/js/211.3a9e00a0.js"><link rel="prefetch" href="/blog/assets/js/212.3f935a3a.js"><link rel="prefetch" href="/blog/assets/js/213.6edf3100.js"><link rel="prefetch" href="/blog/assets/js/214.7746c570.js"><link rel="prefetch" href="/blog/assets/js/215.b40d9155.js"><link rel="prefetch" href="/blog/assets/js/216.e8aa0a81.js"><link rel="prefetch" href="/blog/assets/js/217.2c4d8ca9.js"><link rel="prefetch" href="/blog/assets/js/218.e053d799.js"><link rel="prefetch" href="/blog/assets/js/219.c4814cf3.js"><link rel="prefetch" href="/blog/assets/js/22.ac070753.js"><link rel="prefetch" href="/blog/assets/js/220.30ff3acf.js"><link rel="prefetch" href="/blog/assets/js/221.edb388f3.js"><link rel="prefetch" href="/blog/assets/js/222.6aede850.js"><link rel="prefetch" href="/blog/assets/js/223.4feb60c8.js"><link rel="prefetch" href="/blog/assets/js/224.dd4fadf1.js"><link rel="prefetch" href="/blog/assets/js/225.5f0ffd64.js"><link rel="prefetch" href="/blog/assets/js/226.ae9a5687.js"><link rel="prefetch" href="/blog/assets/js/227.2f4e838b.js"><link rel="prefetch" href="/blog/assets/js/228.1d66a44a.js"><link rel="prefetch" href="/blog/assets/js/229.782e4c18.js"><link rel="prefetch" href="/blog/assets/js/23.29d5c4bd.js"><link rel="prefetch" href="/blog/assets/js/230.26524dfb.js"><link rel="prefetch" href="/blog/assets/js/231.e31a3002.js"><link rel="prefetch" href="/blog/assets/js/232.873a2d6f.js"><link rel="prefetch" href="/blog/assets/js/233.bfeed419.js"><link rel="prefetch" href="/blog/assets/js/234.6395d0cb.js"><link rel="prefetch" href="/blog/assets/js/235.1a589c83.js"><link rel="prefetch" href="/blog/assets/js/237.c77bfb04.js"><link rel="prefetch" href="/blog/assets/js/238.7858771b.js"><link rel="prefetch" href="/blog/assets/js/239.2f3869b3.js"><link rel="prefetch" href="/blog/assets/js/24.f94bf46b.js"><link rel="prefetch" href="/blog/assets/js/240.bfb37cd3.js"><link rel="prefetch" href="/blog/assets/js/241.51dff17b.js"><link rel="prefetch" href="/blog/assets/js/242.75a373ae.js"><link rel="prefetch" href="/blog/assets/js/243.c044d72b.js"><link rel="prefetch" href="/blog/assets/js/244.5effd037.js"><link rel="prefetch" href="/blog/assets/js/245.8786ee8c.js"><link rel="prefetch" href="/blog/assets/js/246.8032aa59.js"><link rel="prefetch" href="/blog/assets/js/247.f2279f85.js"><link rel="prefetch" href="/blog/assets/js/248.06e6f90d.js"><link rel="prefetch" href="/blog/assets/js/249.39caa809.js"><link rel="prefetch" href="/blog/assets/js/25.42ed6155.js"><link rel="prefetch" href="/blog/assets/js/250.80dd9a43.js"><link rel="prefetch" href="/blog/assets/js/251.e38b741e.js"><link rel="prefetch" href="/blog/assets/js/252.a7d2efe3.js"><link rel="prefetch" href="/blog/assets/js/253.ce89a717.js"><link rel="prefetch" href="/blog/assets/js/254.2e6a4d21.js"><link rel="prefetch" href="/blog/assets/js/255.57141cd9.js"><link rel="prefetch" href="/blog/assets/js/256.3433c6ae.js"><link rel="prefetch" href="/blog/assets/js/257.9d473579.js"><link rel="prefetch" href="/blog/assets/js/258.a7e458e4.js"><link rel="prefetch" href="/blog/assets/js/259.1db214ce.js"><link rel="prefetch" href="/blog/assets/js/26.44223078.js"><link rel="prefetch" href="/blog/assets/js/260.01c7f850.js"><link rel="prefetch" href="/blog/assets/js/261.f1e3c876.js"><link rel="prefetch" href="/blog/assets/js/262.482703b4.js"><link rel="prefetch" href="/blog/assets/js/263.51b67088.js"><link rel="prefetch" href="/blog/assets/js/264.38dc2b36.js"><link rel="prefetch" href="/blog/assets/js/265.bddfa212.js"><link rel="prefetch" href="/blog/assets/js/266.7225cb21.js"><link rel="prefetch" href="/blog/assets/js/267.3a0bed3c.js"><link rel="prefetch" href="/blog/assets/js/268.780204a8.js"><link rel="prefetch" href="/blog/assets/js/269.84f089db.js"><link rel="prefetch" href="/blog/assets/js/27.bf749a96.js"><link rel="prefetch" href="/blog/assets/js/270.66897b28.js"><link rel="prefetch" href="/blog/assets/js/271.a0f7d460.js"><link rel="prefetch" href="/blog/assets/js/272.32b6c0da.js"><link rel="prefetch" href="/blog/assets/js/273.d7f0e99a.js"><link rel="prefetch" href="/blog/assets/js/274.1c471f93.js"><link rel="prefetch" href="/blog/assets/js/275.dde11694.js"><link rel="prefetch" href="/blog/assets/js/276.3d492f80.js"><link rel="prefetch" href="/blog/assets/js/277.3250138b.js"><link rel="prefetch" href="/blog/assets/js/278.6aabcf9d.js"><link rel="prefetch" href="/blog/assets/js/279.d3093b80.js"><link rel="prefetch" href="/blog/assets/js/28.b6dc8103.js"><link rel="prefetch" href="/blog/assets/js/280.1614abb4.js"><link rel="prefetch" href="/blog/assets/js/281.e87625de.js"><link rel="prefetch" href="/blog/assets/js/282.0b238e5c.js"><link rel="prefetch" href="/blog/assets/js/283.0e0995a2.js"><link rel="prefetch" href="/blog/assets/js/284.d81aec28.js"><link rel="prefetch" href="/blog/assets/js/285.2b273873.js"><link rel="prefetch" href="/blog/assets/js/286.2c0035c1.js"><link rel="prefetch" href="/blog/assets/js/287.921bfddc.js"><link rel="prefetch" href="/blog/assets/js/288.651cbbe6.js"><link rel="prefetch" href="/blog/assets/js/289.35c66047.js"><link rel="prefetch" href="/blog/assets/js/29.aa6dd1d7.js"><link rel="prefetch" href="/blog/assets/js/290.a83b05bc.js"><link rel="prefetch" href="/blog/assets/js/291.48b24636.js"><link rel="prefetch" href="/blog/assets/js/292.e991dd37.js"><link rel="prefetch" href="/blog/assets/js/293.459aab91.js"><link rel="prefetch" href="/blog/assets/js/294.e65af56f.js"><link rel="prefetch" href="/blog/assets/js/295.9a948464.js"><link rel="prefetch" href="/blog/assets/js/296.86e1e1e5.js"><link rel="prefetch" href="/blog/assets/js/297.7e47a6b1.js"><link rel="prefetch" href="/blog/assets/js/298.94e4a488.js"><link rel="prefetch" href="/blog/assets/js/299.f51c5569.js"><link rel="prefetch" href="/blog/assets/js/30.6f8180a1.js"><link rel="prefetch" href="/blog/assets/js/300.eed7693c.js"><link rel="prefetch" href="/blog/assets/js/301.fef1f0a7.js"><link rel="prefetch" href="/blog/assets/js/302.b1b82c6b.js"><link rel="prefetch" href="/blog/assets/js/303.3e75cefa.js"><link rel="prefetch" href="/blog/assets/js/304.e252c62c.js"><link rel="prefetch" href="/blog/assets/js/305.977f1c24.js"><link rel="prefetch" href="/blog/assets/js/306.9a98d1fe.js"><link rel="prefetch" href="/blog/assets/js/307.28dbdd2f.js"><link rel="prefetch" href="/blog/assets/js/308.3efa138f.js"><link rel="prefetch" href="/blog/assets/js/309.1828479a.js"><link rel="prefetch" href="/blog/assets/js/31.1dbb0337.js"><link rel="prefetch" href="/blog/assets/js/310.45e250b6.js"><link rel="prefetch" href="/blog/assets/js/311.aad3e821.js"><link rel="prefetch" href="/blog/assets/js/312.76f80ef5.js"><link rel="prefetch" href="/blog/assets/js/313.89456458.js"><link rel="prefetch" href="/blog/assets/js/314.533d77f8.js"><link rel="prefetch" href="/blog/assets/js/315.3d874afb.js"><link rel="prefetch" href="/blog/assets/js/316.4253a186.js"><link rel="prefetch" href="/blog/assets/js/317.53acd71b.js"><link rel="prefetch" href="/blog/assets/js/318.8024ac39.js"><link rel="prefetch" href="/blog/assets/js/319.ca32c446.js"><link rel="prefetch" href="/blog/assets/js/32.19e42132.js"><link rel="prefetch" href="/blog/assets/js/320.41c1240a.js"><link rel="prefetch" href="/blog/assets/js/321.43eb35d6.js"><link rel="prefetch" href="/blog/assets/js/322.e2f65b58.js"><link rel="prefetch" href="/blog/assets/js/323.7c084398.js"><link rel="prefetch" href="/blog/assets/js/324.37c86871.js"><link rel="prefetch" href="/blog/assets/js/325.c05270b8.js"><link rel="prefetch" href="/blog/assets/js/326.b61d3edb.js"><link rel="prefetch" href="/blog/assets/js/327.3fc2edee.js"><link rel="prefetch" href="/blog/assets/js/328.641aa88e.js"><link rel="prefetch" href="/blog/assets/js/329.90fb4811.js"><link rel="prefetch" href="/blog/assets/js/33.7bb2874d.js"><link rel="prefetch" href="/blog/assets/js/330.99ffe72c.js"><link rel="prefetch" href="/blog/assets/js/331.dd93d962.js"><link rel="prefetch" href="/blog/assets/js/332.ad24ac10.js"><link rel="prefetch" href="/blog/assets/js/34.e0b494d4.js"><link rel="prefetch" href="/blog/assets/js/35.5bf88574.js"><link rel="prefetch" href="/blog/assets/js/36.1082ac72.js"><link rel="prefetch" href="/blog/assets/js/37.c4f5298d.js"><link rel="prefetch" href="/blog/assets/js/38.21cad5aa.js"><link rel="prefetch" href="/blog/assets/js/39.90f2de3e.js"><link rel="prefetch" href="/blog/assets/js/4.74ba7bf5.js"><link rel="prefetch" href="/blog/assets/js/40.8523e159.js"><link rel="prefetch" href="/blog/assets/js/41.0e921fe9.js"><link rel="prefetch" href="/blog/assets/js/42.f87530df.js"><link rel="prefetch" href="/blog/assets/js/43.811d34af.js"><link rel="prefetch" href="/blog/assets/js/44.bc291d54.js"><link rel="prefetch" href="/blog/assets/js/45.eb6f5146.js"><link rel="prefetch" href="/blog/assets/js/46.02e94ffd.js"><link rel="prefetch" href="/blog/assets/js/47.87b757ed.js"><link rel="prefetch" href="/blog/assets/js/48.2eeb2209.js"><link rel="prefetch" href="/blog/assets/js/49.e78a7199.js"><link rel="prefetch" href="/blog/assets/js/5.e9378e57.js"><link rel="prefetch" href="/blog/assets/js/50.d1760273.js"><link rel="prefetch" href="/blog/assets/js/51.26090d02.js"><link rel="prefetch" href="/blog/assets/js/52.32249c22.js"><link rel="prefetch" href="/blog/assets/js/53.f1d4011c.js"><link rel="prefetch" href="/blog/assets/js/54.2ec28826.js"><link rel="prefetch" href="/blog/assets/js/55.6d3b5453.js"><link rel="prefetch" href="/blog/assets/js/56.498754ab.js"><link rel="prefetch" href="/blog/assets/js/57.bf731ae3.js"><link rel="prefetch" href="/blog/assets/js/58.45f89612.js"><link rel="prefetch" href="/blog/assets/js/59.77cee52a.js"><link rel="prefetch" href="/blog/assets/js/6.44973283.js"><link rel="prefetch" href="/blog/assets/js/60.ebca30a1.js"><link rel="prefetch" href="/blog/assets/js/61.76c42294.js"><link rel="prefetch" href="/blog/assets/js/62.1fadbfff.js"><link rel="prefetch" href="/blog/assets/js/63.a2ef7d3e.js"><link rel="prefetch" href="/blog/assets/js/64.3c46b5e9.js"><link rel="prefetch" href="/blog/assets/js/65.ade3eafb.js"><link rel="prefetch" href="/blog/assets/js/66.33e7ba11.js"><link rel="prefetch" href="/blog/assets/js/67.3fb09a19.js"><link rel="prefetch" href="/blog/assets/js/68.c7607953.js"><link rel="prefetch" href="/blog/assets/js/69.1775a242.js"><link rel="prefetch" href="/blog/assets/js/7.ed958d59.js"><link rel="prefetch" href="/blog/assets/js/70.f1d77740.js"><link rel="prefetch" href="/blog/assets/js/71.509bdec6.js"><link rel="prefetch" href="/blog/assets/js/72.64140368.js"><link rel="prefetch" href="/blog/assets/js/73.e52951f4.js"><link rel="prefetch" href="/blog/assets/js/74.dead7feb.js"><link rel="prefetch" href="/blog/assets/js/75.1b0d6a66.js"><link rel="prefetch" href="/blog/assets/js/76.bbe4b150.js"><link rel="prefetch" href="/blog/assets/js/77.7d923b66.js"><link rel="prefetch" href="/blog/assets/js/78.a0534963.js"><link rel="prefetch" href="/blog/assets/js/79.7ad434a4.js"><link rel="prefetch" href="/blog/assets/js/8.a0e1d6e9.js"><link rel="prefetch" href="/blog/assets/js/80.07fb32e2.js"><link rel="prefetch" href="/blog/assets/js/81.8c112a38.js"><link rel="prefetch" href="/blog/assets/js/82.5eca4d86.js"><link rel="prefetch" href="/blog/assets/js/83.9ca3c663.js"><link rel="prefetch" href="/blog/assets/js/84.f2f9d5b6.js"><link rel="prefetch" href="/blog/assets/js/85.63749a55.js"><link rel="prefetch" href="/blog/assets/js/86.ddb75c11.js"><link rel="prefetch" href="/blog/assets/js/87.58d406ca.js"><link rel="prefetch" href="/blog/assets/js/88.d08eb035.js"><link rel="prefetch" href="/blog/assets/js/89.786fd0f6.js"><link rel="prefetch" href="/blog/assets/js/9.c7006f0b.js"><link rel="prefetch" href="/blog/assets/js/90.528a1988.js"><link rel="prefetch" href="/blog/assets/js/91.e8914879.js"><link rel="prefetch" href="/blog/assets/js/92.bcbf6a42.js"><link rel="prefetch" href="/blog/assets/js/93.ebdbe55d.js"><link rel="prefetch" href="/blog/assets/js/94.64df787c.js"><link rel="prefetch" href="/blog/assets/js/95.0f3cfc8c.js"><link rel="prefetch" href="/blog/assets/js/96.8fab6ddf.js"><link rel="prefetch" href="/blog/assets/js/97.70009f4e.js"><link rel="prefetch" href="/blog/assets/js/98.c06977fb.js"><link rel="prefetch" href="/blog/assets/js/99.b89f686b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.a94e7ef0.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/index/logo.png" alt="i采薇小楼" class="logo"> <span class="site-name can-hide">i采薇小楼</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="/blog/navigation/" class="nav-link">导航站</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="硬件知识" class="dropdown-title"><a href="/blog/hardware/technology/hole/" class="link-title">硬件知识</a> <span class="title" style="display:none;">硬件知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/hardware/technology/hole/" class="nav-link">工艺基础</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/si/sparam/" class="nav-link">信号完整性</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/use/way/" class="nav-link">原理设计</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/use/power/" class="nav-link">电源设计</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/datasheet/" class="nav-link">器件手册</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/c51/led/" class="nav-link">C51</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/stm32/info/" class="nav-link">STM32</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/vivado/ver/" class="nav-link">Vivado</a></li><li class="dropdown-item"><h4>软件技巧</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/hardware/cadence/device/" class="nav-link">Cadence</a></li><li class="dropdown-subitem"><a href="/blog/hardware/ad/rou/" class="nav-link">Altium Designer</a></li><li class="dropdown-subitem"><a href="/blog/hardware/mentor/shortkey/" class="nav-link">Mentor Graphics</a></li><li class="dropdown-subitem"><a href="/blog/hardware/pads/command/" class="nav-link">Pads</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端构建" class="dropdown-title"><a href="/blog/front/vuepress/install/" class="link-title">前端构建</a> <span class="title" style="display:none;">前端构建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/front/vuepress/install/" class="nav-link">VuePress</a></li><li class="dropdown-item"><!----> <a href="/blog/software/csharp/" class="nav-link">C#</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件开发" class="dropdown-title"><a href="/blog/soft/springboot/use/multi/" class="link-title">软件开发</a> <span class="title" style="display:none;">软件开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/soft/springboot/use/multi/" class="nav-link">SpringBoot使用</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/webapi/info/" class="nav-link">WPF</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/python/note/" class="nav-link">Python</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/qt/note/" class="nav-link">Qt</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/win32/hello/" class="nav-link">Win32</a></li><li class="dropdown-item"><!----> <a href="/blog/project/cplusplus/com/" class="nav-link">COM</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/skill/function/" class="nav-link">Allegro Skill</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/mentor/use/" class="nav-link">Mentor VBS</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/objectarx/version/" class="nav-link">ObjectArx二次开发</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维管理" class="dropdown-title"><a href="/blog/operation/docker/install/" class="link-title">运维管理</a> <span class="title" style="display:none;">运维管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/operation/docker/install/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/blog/operation/centos/deploy/" class="nav-link">CentOS</a></li><li class="dropdown-item"><!----> <a href="/blog/operation/nas/install/" class="nav-link">群晖NAS</a></li><li class="dropdown-item"><!----> <a href="/blog/operation/npm/" class="nav-link">NodeJS</a></li><li class="dropdown-item"><!----> <a href="/blog/operation/git/error/" class="nav-link">Git</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><!----> <span class="title" style="display:;">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/linux/shell/example/" class="nav-link">Shell例子</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><a href="/blog/tool/office/excel/formula/" class="link-title">工具使用</a> <span class="title" style="display:none;">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/office/excel/formula/" class="nav-link">Excel常用方法</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/other/typora/" class="nav-link">Typora过期解决</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/other/terminal/" class="nav-link">Windows Terminal美化</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><a href="/blog/collect/web/" class="link-title">收藏</a> <span class="title" style="display:none;">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/collect/web/" class="nav-link">实用网站</a></li><li class="dropdown-item"><h4>Markdown</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/markdown/syntax/" class="nav-link">语法</a></li><li class="dropdown-subitem"><a href="/blog/collect/markdown/settype/" class="nav-link">排版</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><a href="/blog/about/me/" class="link-title">关于</a> <span class="title" style="display:none;">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/about/me/" class="nav-link">自我介绍</a></li><li class="dropdown-item"><!----> <a href="/blog/about/learn-history/" class="nav-link">学习记录</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/blog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/categories/" class="nav-link">分类</a></li><li class="dropdown-subitem"><a href="/blog/tags/" class="nav-link">标签</a></li><li class="dropdown-subitem"><a href="/blog/archives/" class="nav-link">归档</a></li></ul></li></ul></div></div> <a href="https://github.com/icaiwei.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/icaiwei/icaiwei-cdn@1.0.0/images/avatar.png"> <div class="blogger-info"><h3>i采薇</h3> <span>昔我往矣，杨柳依依，今我来思，雨雪霏霏。</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="/blog/navigation/" class="nav-link">导航站</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="硬件知识" class="dropdown-title"><a href="/blog/hardware/technology/hole/" class="link-title">硬件知识</a> <span class="title" style="display:none;">硬件知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/hardware/technology/hole/" class="nav-link">工艺基础</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/si/sparam/" class="nav-link">信号完整性</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/use/way/" class="nav-link">原理设计</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/use/power/" class="nav-link">电源设计</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/datasheet/" class="nav-link">器件手册</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/c51/led/" class="nav-link">C51</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/stm32/info/" class="nav-link">STM32</a></li><li class="dropdown-item"><!----> <a href="/blog/hardware/vivado/ver/" class="nav-link">Vivado</a></li><li class="dropdown-item"><h4>软件技巧</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/hardware/cadence/device/" class="nav-link">Cadence</a></li><li class="dropdown-subitem"><a href="/blog/hardware/ad/rou/" class="nav-link">Altium Designer</a></li><li class="dropdown-subitem"><a href="/blog/hardware/mentor/shortkey/" class="nav-link">Mentor Graphics</a></li><li class="dropdown-subitem"><a href="/blog/hardware/pads/command/" class="nav-link">Pads</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端构建" class="dropdown-title"><a href="/blog/front/vuepress/install/" class="link-title">前端构建</a> <span class="title" style="display:none;">前端构建</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/front/vuepress/install/" class="nav-link">VuePress</a></li><li class="dropdown-item"><!----> <a href="/blog/software/csharp/" class="nav-link">C#</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="软件开发" class="dropdown-title"><a href="/blog/soft/springboot/use/multi/" class="link-title">软件开发</a> <span class="title" style="display:none;">软件开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/soft/springboot/use/multi/" class="nav-link">SpringBoot使用</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/webapi/info/" class="nav-link">WPF</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/python/note/" class="nav-link">Python</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/qt/note/" class="nav-link">Qt</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/win32/hello/" class="nav-link">Win32</a></li><li class="dropdown-item"><!----> <a href="/blog/project/cplusplus/com/" class="nav-link">COM</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/skill/function/" class="nav-link">Allegro Skill</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/mentor/use/" class="nav-link">Mentor VBS</a></li><li class="dropdown-item"><!----> <a href="/blog/soft/objectarx/version/" class="nav-link">ObjectArx二次开发</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维管理" class="dropdown-title"><a href="/blog/operation/docker/install/" class="link-title">运维管理</a> <span class="title" style="display:none;">运维管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/operation/docker/install/" class="nav-link">Docker</a></li><li class="dropdown-item"><!----> <a href="/blog/operation/centos/deploy/" class="nav-link">CentOS</a></li><li class="dropdown-item"><!----> <a href="/blog/operation/nas/install/" class="nav-link">群晖NAS</a></li><li class="dropdown-item"><!----> <a href="/blog/operation/npm/" class="nav-link">NodeJS</a></li><li class="dropdown-item"><!----> <a href="/blog/operation/git/error/" class="nav-link">Git</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><!----> <span class="title" style="display:;">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/linux/shell/example/" class="nav-link">Shell例子</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具使用" class="dropdown-title"><a href="/blog/tool/office/excel/formula/" class="link-title">工具使用</a> <span class="title" style="display:none;">工具使用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/office/excel/formula/" class="nav-link">Excel常用方法</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/other/typora/" class="nav-link">Typora过期解决</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/other/terminal/" class="nav-link">Windows Terminal美化</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><a href="/blog/collect/web/" class="link-title">收藏</a> <span class="title" style="display:none;">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/collect/web/" class="nav-link">实用网站</a></li><li class="dropdown-item"><h4>Markdown</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/markdown/syntax/" class="nav-link">语法</a></li><li class="dropdown-subitem"><a href="/blog/collect/markdown/settype/" class="nav-link">排版</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><a href="/blog/about/me/" class="link-title">关于</a> <span class="title" style="display:none;">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/about/me/" class="nav-link">自我介绍</a></li><li class="dropdown-item"><!----> <a href="/blog/about/learn-history/" class="nav-link">学习记录</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/blog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4></h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/categories/" class="nav-link">分类</a></li><li class="dropdown-subitem"><a href="/blog/tags/" class="nav-link">标签</a></li><li class="dropdown-subitem"><a href="/blog/archives/" class="nav-link">归档</a></li></ul></li></ul></div></div> <a href="https://github.com/icaiwei.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Springboot使用</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>WPF</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>WebAPI增删改查</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>WPF增删改查</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/soft/wpf/info/" class="sidebar-link">WPF项增删改查01-说明</a></li><li><a href="/blog/soft/wpf/newproject/" class="sidebar-link">WPF项增删改查02-新建工程</a></li><li><a href="/blog/soft/wpf/caliburn/" class="sidebar-link">WPF项增删改查03-Caliburn配置</a></li><li><a href="/blog/soft/wpf/handycontrol/" class="sidebar-link">WPF项增删改查04-HandyControl配置</a></li><li><a href="/blog/soft/wpf/pages/" class="sidebar-link">WPF增删改查05-页面切换</a></li><li><a href="/blog/soft/wpf/restsharp/" class="sidebar-link">WPF增删改查06-RestHttp配置</a></li><li><a href="/blog/soft/wpf/user/" class="sidebar-link">WPF增删改查07-用户增删改查</a></li><li><a href="/blog/soft/wpf/login/" class="sidebar-link">WPF增删改查08-登录实现</a></li><li><a href="/blog/soft/wpf/beautify/" aria-current="page" class="active sidebar-link">WPF增删改查09-美化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/blog/soft/wpf/beautify/#app-xaml" class="sidebar-link">App.xaml</a></li><li class="sidebar-sub-header level2"><a href="/blog/soft/wpf/beautify/#mainview-xaml" class="sidebar-link">MainView.xaml</a></li><li class="sidebar-sub-header level2"><a href="/blog/soft/wpf/beautify/#mainview-xaml-cs" class="sidebar-link">MainView.xaml.cs</a></li><li class="sidebar-sub-header level2"><a href="/blog/soft/wpf/beautify/#loginview-xaml" class="sidebar-link">LoginView.xaml</a></li><li class="sidebar-sub-header level2"><a href="/blog/soft/wpf/beautify/#loginview-xaml-cs" class="sidebar-link">LoginView.xaml.cs</a></li></ul></li><li><a href="/blog/soft/wpf/publish/" class="sidebar-link">WPF增删改查10-发布</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>MaterialDesign</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Qt</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Win32</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>COM</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Allegro Skill</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Mentor VBS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ObjectArx二次开发</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>开发日志</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/blog/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/blog/categories/?category=%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91" title="分类" data-v-06225672>软件开发</a></li><li data-v-06225672><a href="/blog/categories/?category=WPF" title="分类" data-v-06225672>WPF</a></li><li data-v-06225672><a href="/blog/categories/?category=WPF%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5" title="分类" data-v-06225672>WPF增删改查</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://www.ic-sugar.com/blog" target="_blank" title="作者" class="beLink" data-v-06225672>i采薇</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-10-17</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">WPF增删改查09-美化<!----></h1> <!----> <div class="theme-vdoing-content content__default"><p>使用HandyControl美化非客户区，不需要可跳过</p> <h2 id="app-xaml"><a href="#app-xaml" class="header-anchor">#</a> App.xaml</h2> <div class="language-xaml line-numbers-mode"><pre class="language-text"><code>&lt;Application
+    x:Class=&quot;Test.Wpf.App&quot;
+    xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+    xmlns:local=&quot;clr-namespace:Test.Wpf&quot;&gt;
+    &lt;Application.Resources&gt;
+        &lt;ResourceDictionary&gt;
+            &lt;ResourceDictionary.MergedDictionaries&gt;
+                &lt;ResourceDictionary&gt;
+                    &lt;local:Bootstrapper x:Key=&quot;bootstrapper&quot; /&gt;
+                &lt;/ResourceDictionary&gt;
+                &lt;ResourceDictionary Source=&quot;pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml&quot; /&gt;
+                &lt;ResourceDictionary Source=&quot;pack://application:,,,/HandyControl;component/Themes/Theme.xaml&quot; /&gt;
+                &lt;!--  Base  --&gt;
+                &lt;ResourceDictionary Source=&quot;pack://application:,,,/Resources/Styles/Color.xaml&quot; /&gt;
+                &lt;ResourceDictionary Source=&quot;pack://application:,,,/Resources/Styles/Brush.xaml&quot; /&gt;
+                &lt;ResourceDictionary Source=&quot;pack://application:,,,/Resources/Styles/Geometry.xaml&quot; /&gt;
+                &lt;ResourceDictionary Source=&quot;pack://application:,,,/Resources/Styles/Style.xaml&quot; /&gt;
+                &lt;!--  Theme  --&gt;
+                &lt;ResourceDictionary Source=&quot;pack://application:,,,/Resources/Styles/Themes/BaseLight.xaml&quot; /&gt;
+                &lt;!--  Primary  --&gt;
+                &lt;ResourceDictionary Source=&quot;pack://application:,,,/Resources/Styles/Primary/Primary.xaml&quot; /&gt;
+            &lt;/ResourceDictionary.MergedDictionaries&gt;
+            &lt;FontFamily x:Key=&quot;IconFont&quot;&gt;pack://application:,,,/Resources/#iconfont&lt;/FontFamily&gt;
+        &lt;/ResourceDictionary&gt;
+    &lt;/Application.Resources&gt;
+&lt;/Application&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="mainview-xaml"><a href="#mainview-xaml" class="header-anchor">#</a> MainView.xaml</h2> <div class="language-xaml line-numbers-mode"><pre class="language-text"><code>&lt;hc:GlowWindow
+    x:Class=&quot;Test.Wpf.Views.MainView&quot;
+    xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+    xmlns:cm=&quot;http://www.caliburnproject.org&quot;
+    xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+    xmlns:hc=&quot;https://handyorg.github.io/handycontrol&quot;
+    xmlns:local=&quot;clr-namespace:Test.Wpf.Views&quot;
+    xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+    Title=&quot;MainView&quot;
+    Width=&quot;950&quot;
+    Height=&quot;650&quot;
+    MinWidth=&quot;800&quot;
+    MinHeight=&quot;600&quot;
+    ActiveGlowColor=&quot;{DynamicResource PrimaryColor}&quot;
+    AllowsTransparency=&quot;True&quot;
+    Background=&quot;{DynamicResource RegionBrush}&quot;
+    MouseDoubleClick=&quot;Window_MouseDoubleClick&quot;
+    MouseLeftButtonDown=&quot;Window_MouseLeftButtonDown&quot;
+    ResizeMode=&quot;CanResizeWithGrip&quot;
+    WindowStartupLocation=&quot;CenterScreen&quot;
+    WindowStyle=&quot;None&quot;
+    mc:Ignorable=&quot;d&quot;&gt;
+    &lt;Grid&gt;
+        &lt;Grid.RowDefinitions&gt;
+            &lt;RowDefinition Height=&quot;auto&quot; /&gt;
+            &lt;RowDefinition /&gt;
+        &lt;/Grid.RowDefinitions&gt;
+        &lt;Grid Grid.Row=&quot;0&quot;&gt;
+            &lt;DockPanel&gt;
+                &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
+                    &lt;Image
+                        Height=&quot;30&quot;
+                        Margin=&quot;10,3&quot;
+                        HorizontalAlignment=&quot;Left&quot;
+                        Source=&quot;pack://application:,,,/Resources/Images/icon.ico&quot; /&gt;
+                    &lt;hc:OutlineText
+                        Margin=&quot;3&quot;
+                        Fill=&quot;{DynamicResource PrimaryBrush}&quot;
+                        FontFamily=&quot;隶书&quot;
+                        FontSize=&quot;30&quot;
+                        FontWeight=&quot;Bold&quot;
+                        Stroke=&quot;Violet&quot;
+                        StrokeThickness=&quot;2&quot;
+                        Text=&quot;i采薇工具箱&quot; /&gt;
+                &lt;/StackPanel&gt;
+                &lt;StackPanel HorizontalAlignment=&quot;Right&quot; Orientation=&quot;Horizontal&quot;&gt;
+                    &lt;Button
+                        Name=&quot;ButtonConfig&quot;
+                        Width=&quot;30&quot;
+                        Height=&quot;30&quot;
+                        Margin=&quot;3&quot;
+                        hc:BorderElement.CornerRadius=&quot;16&quot;
+                        hc:IconElement.Geometry=&quot;{StaticResource ConfigGeometry}&quot;
+                        hc:IconElement.Height=&quot;8&quot;
+                        hc:IconElement.Width=&quot;8&quot;
+                        Click=&quot;ButtonConfig_OnClick&quot;
+                        Style=&quot;{StaticResource ButtonPrimary}&quot; /&gt;
+                    &lt;Popup
+                        Name=&quot;PopupConfig&quot;
+                        AllowsTransparency=&quot;True&quot;
+                        HorizontalOffset=&quot;-28&quot;
+                        PlacementTarget=&quot;{Binding ElementName=ButtonConfig}&quot;
+                        StaysOpen=&quot;False&quot;
+                        VerticalOffset=&quot;6&quot;&gt;
+                        &lt;Border
+                            Margin=&quot;16&quot;
+                            Background=&quot;{DynamicResource SecondaryRegionBrush}&quot;
+                            CornerRadius=&quot;4&quot;
+                            Effect=&quot;{StaticResource EffectShadow1}&quot;&gt;
+                            &lt;StackPanel Margin=&quot;10,10,10,10&quot; Orientation=&quot;Horizontal&quot;&gt;
+                                &lt;Button
+                                    Name=&quot;BaseDark&quot;
+                                    VerticalAlignment=&quot;Center&quot;
+                                    Click=&quot;ButtonTheme_Click&quot;
+                                    Style=&quot;{StaticResource ButtonCustom}&quot;&gt;
+                                    &lt;Border
+                                        Width=&quot;32&quot;
+                                        Height=&quot;21&quot;
+                                        Background=&quot;Black&quot;
+                                        BorderBrush=&quot;{DynamicResource BorderBrush}&quot;
+                                        BorderThickness=&quot;1&quot;
+                                        CornerRadius=&quot;2&quot; /&gt;
+                                &lt;/Button&gt;
+                                &lt;Button
+                                    Name=&quot;BaseLight&quot;
+                                    VerticalAlignment=&quot;Center&quot;
+                                    Click=&quot;ButtonTheme_Click&quot;
+                                    Style=&quot;{StaticResource ButtonCustom}&quot;&gt;
+                                    &lt;Border
+                                        Width=&quot;32&quot;
+                                        Height=&quot;21&quot;
+                                        Background=&quot;White&quot;
+                                        BorderBrush=&quot;{DynamicResource BorderBrush}&quot;
+                                        BorderThickness=&quot;1&quot;
+                                        CornerRadius=&quot;2&quot; /&gt;
+                                &lt;/Button&gt;
+                                &lt;Button
+                                    Name=&quot;BaseColor&quot;
+                                    VerticalAlignment=&quot;Center&quot;
+                                    Click=&quot;ButtonColor_Click&quot;
+                                    Style=&quot;{StaticResource ButtonCustom}&quot;&gt;
+                                    &lt;Border
+                                        Width=&quot;32&quot;
+                                        Height=&quot;21&quot;
+                                        Background=&quot;DarkViolet&quot;
+                                        BorderBrush=&quot;{DynamicResource BorderBrush}&quot;
+                                        BorderThickness=&quot;1&quot;
+                                        CornerRadius=&quot;2&quot; /&gt;
+                                &lt;/Button&gt;
+                            &lt;/StackPanel&gt;
+                        &lt;/Border&gt;
+                    &lt;/Popup&gt;
+
+                    &lt;Button
+                        Margin=&quot;3&quot;
+                        hc:BorderElement.CornerRadius=&quot;16&quot;
+                        hc:IconElement.Geometry=&quot;{StaticResource WindowMinGeometry}&quot;
+                        Click=&quot;ButtonMinimize_Click&quot;
+                        Style=&quot;{StaticResource ButtonPrimary}&quot; /&gt;
+                    &lt;Button
+                        Margin=&quot;3&quot;
+                        hc:BorderElement.CornerRadius=&quot;16&quot;
+                        hc:IconElement.Geometry=&quot;{StaticResource WindowMaxGeometry}&quot;
+                        Click=&quot;ButtonMaximize_Click&quot;
+                        Style=&quot;{StaticResource ButtonPrimary}&quot; /&gt;
+                    &lt;Button
+                        Margin=&quot;3&quot;
+                        hc:BorderElement.CornerRadius=&quot;16&quot;
+                        hc:IconElement.Geometry=&quot;{StaticResource CloseGeometry}&quot;
+                        Click=&quot;ButtonClose_Click&quot;
+                        Style=&quot;{StaticResource ButtonPrimary}&quot; /&gt;
+                &lt;/StackPanel&gt;
+
+            &lt;/DockPanel&gt;
+        &lt;/Grid&gt;
+        &lt;Grid Grid.Row=&quot;1&quot;&gt;
+            &lt;Grid.ColumnDefinitions&gt;
+                &lt;ColumnDefinition Width=&quot;{Binding MenuWidth}&quot; /&gt;
+                &lt;ColumnDefinition Width=&quot;20&quot; /&gt;
+                &lt;ColumnDefinition /&gt;
+            &lt;/Grid.ColumnDefinitions&gt;
+            &lt;Grid Grid.Column=&quot;0&quot;&gt;
+                &lt;Border
+                    Grid.ColumnSpan=&quot;2&quot;
+                    BorderBrush=&quot;LightSteelBlue&quot;
+                    BorderThickness=&quot;2&quot;
+                    CornerRadius=&quot;5&quot; /&gt;
+                &lt;Border
+                    Grid.Column=&quot;0&quot;
+                    BorderBrush=&quot;LightSteelBlue&quot;
+                    BorderThickness=&quot;2&quot;
+                    CornerRadius=&quot;5&quot; /&gt;
+                &lt;ListBox
+                    Name=&quot;ListBoxItems&quot;
+                    Grid.Column=&quot;0&quot;
+                    Margin=&quot;2&quot;
+                    cm:Message.Attach=&quot;[Event SelectionChanged] = [Action ListBoxItems_SelectionChanged]&quot;
+                    SelectedIndex=&quot;1&quot;
+                    SelectedItem=&quot;{Binding SelectedItem}&quot; /&gt;
+            &lt;/Grid&gt;
+            &lt;Grid Grid.Column=&quot;1&quot;&gt;
+                &lt;StackPanel HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Top&quot;&gt;
+                    &lt;StackPanel&gt;
+                        &lt;ToggleButton
+                            Name=&quot;ToggleMenuWidth&quot;
+                            HorizontalAlignment=&quot;Center&quot;
+                            BorderThickness=&quot;0&quot;
+                            IsChecked=&quot;True&quot;
+                            Style=&quot;{StaticResource ToggleButtonFlip.Small}&quot;&gt;
+                            &lt;hc:StatusSwitchElement.CheckedElement&gt;
+                                &lt;Border Background=&quot;{DynamicResource PrimaryBrush}&quot;&gt;
+                                    &lt;TextBlock
+                                        HorizontalAlignment=&quot;Center&quot;
+                                        VerticalAlignment=&quot;Center&quot;
+                                        Foreground=&quot;{DynamicResource TextIconBrush}&quot;
+                                        Text=&quot;&amp;lt;&quot; /&gt;
+                                &lt;/Border&gt;
+                            &lt;/hc:StatusSwitchElement.CheckedElement&gt;
+                            &lt;Border Background=&quot;{DynamicResource SuccessBrush}&quot;&gt;
+                                &lt;TextBlock
+                                    HorizontalAlignment=&quot;Center&quot;
+                                    VerticalAlignment=&quot;Center&quot;
+                                    Foreground=&quot;{DynamicResource TextIconBrush}&quot;
+                                    Text=&quot;&amp;gt;&quot; /&gt;
+                            &lt;/Border&gt;
+                        &lt;/ToggleButton&gt;
+                    &lt;/StackPanel&gt;
+                &lt;/StackPanel&gt;
+            &lt;/Grid&gt;
+            &lt;Grid Grid.Column=&quot;2&quot;&gt;
+                &lt;ContentControl x:Name=&quot;ActiveWindowView&quot; /&gt;
+            &lt;/Grid&gt;
+        &lt;/Grid&gt;
+    &lt;/Grid&gt;
+&lt;/hc:GlowWindow&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br></div></div><h2 id="mainview-xaml-cs"><a href="#mainview-xaml-cs" class="header-anchor">#</a> MainView.xaml.cs</h2> <p>去掉了继承的Window类</p> <div class="language-c# line-numbers-mode"><pre class="language-text"><code>/// &lt;summary&gt;
+/// MainView.xaml 的交互逻辑
+/// &lt;/summary&gt;
+public partial class MainView
+{
+    private int ThemeColorFlag { get; set; } = 0;
+    public MainView()
+    {
+        InitializeComponent();
+
+        this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+        this.MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
+
+        InitialResourceDictionary();
+    }
+
+    // Ititial ResourceDictionary
+    private void InitialResourceDictionary()
+    {
+        // Theme
+        ResourceDictionary theme = new ResourceDictionary
+        {
+            Source = new Uri(&quot;pack://application:,,,/Resources/Styles/Themes/BaseLight.xaml&quot;)
+        };
+        Resources.MergedDictionaries.Add(theme);
+        // Color
+        ResourceDictionary color = new ResourceDictionary
+        {
+            Source = new Uri(&quot;pack://application:,,,/Resources/Styles/Primary/Primary.xaml&quot;)
+        };
+        Resources.MergedDictionaries.Add(color);
+    }
+
+    // Updata ResourceDictionary
+    private void UpdataResourceDictionary(string resourceStr, int pos)
+    {
+        if (pos &lt; 0 || pos &gt; 2)
+        {
+            return;
+        }
+        ResourceDictionary resource = new ResourceDictionary
+        {
+            Source = new Uri(resourceStr)
+        };
+        Resources.MergedDictionaries.RemoveAt(pos);
+        Resources.MergedDictionaries.Insert(pos, resource);
+    }
+
+    //// Theme
+    private void ButtonTheme_Click(object sender, RoutedEventArgs e)
+    {
+        if (!(sender is Button button))
+        {
+            return;
+        }
+        string resourceStr = &quot;pack://application:,,,/Resources/Styles/Themes/BaseLight.xaml&quot;;
+        if (button.Name.ToString() == &quot;BaseDark&quot;)
+        {
+            resourceStr = &quot;pack://application:,,,/Resources/Styles/Themes/BaseDark.xaml&quot;;
+        }
+        UpdataResourceDictionary(resourceStr, 0);
+    }
+
+    //// Primary Color
+    private void ButtonColor_Click(object sender, RoutedEventArgs e)
+    {
+        ThemeColorFlag = (ThemeColorFlag + 1) % 3;
+        string resourceStr = &quot;pack://application:,,,/Resources/Styles/Primary/Primary.xaml&quot;;
+        if (ThemeColorFlag == 1)
+        {
+            resourceStr = &quot;pack://application:,,,/Resources/Styles/Primary/Magenta.xaml&quot;;
+        }
+        else if (ThemeColorFlag == 2)
+        {
+            resourceStr = &quot;pack://application:,,,/Resources/Styles/Primary/Violet.xaml&quot;;
+        }
+        UpdataResourceDictionary(resourceStr, 1);
+    }
+
+    ////主题配置
+    private void ButtonConfig_OnClick(object sender, RoutedEventArgs e) =&gt; PopupConfig.IsOpen = true;
+    // 最小化
+    private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
+    {
+        WindowState = WindowState.Minimized;
+    }
+    //最大化
+    private void ButtonMaximize_Click(object sender, RoutedEventArgs e)
+    {
+        if (this.WindowState == WindowState.Maximized)
+            this.WindowState = WindowState.Normal;
+        else
+            this.WindowState = WindowState.Maximized;
+    }
+    // 关闭
+    private void ButtonClose_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
+    private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+    {
+        this.DragMove();
+    }
+    private void Window_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+    {
+        if (this.WindowState == WindowState.Normal)
+            this.WindowState = WindowState.Maximized;
+        else
+            this.WindowState = WindowState.Normal;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br></div></div><h2 id="loginview-xaml"><a href="#loginview-xaml" class="header-anchor">#</a> LoginView.xaml</h2> <div class="language-xaml line-numbers-mode"><pre class="language-text"><code>&lt;hc:GlowWindow
+    x:Class=&quot;Test.Wpf.Views.LoginView&quot;
+    xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+    xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+    xmlns:hc=&quot;https://handyorg.github.io/handycontrol&quot;
+    xmlns:local=&quot;clr-namespace:Test.Wpf.Views&quot;
+    xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+    Title=&quot;LoginView&quot;
+    Width=&quot;600&quot;
+    Height=&quot;400&quot;
+    MinWidth=&quot;600&quot;
+    MinHeight=&quot;400&quot;
+    AllowsTransparency=&quot;True&quot;
+    ResizeMode=&quot;NoResize&quot;
+    WindowStartupLocation=&quot;CenterScreen&quot;
+    WindowStyle=&quot;None&quot;
+    mc:Ignorable=&quot;d&quot;&gt;
+    &lt;Border CornerRadius=&quot;120&quot;&gt;
+        &lt;Grid&gt;
+            &lt;Grid.RowDefinitions&gt;
+                &lt;RowDefinition Height=&quot;auto&quot; /&gt;
+                &lt;RowDefinition /&gt;
+            &lt;/Grid.RowDefinitions&gt;
+            &lt;Grid Grid.Row=&quot;0&quot; MouseLeftButtonDown=&quot;Window_MouseLeftButtonDown&quot;&gt;
+                &lt;DockPanel&gt;
+                    &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
+                        &lt;Image
+                            Height=&quot;30&quot;
+                            Margin=&quot;10,3&quot;
+                            HorizontalAlignment=&quot;Left&quot;
+                            Source=&quot;pack://application:,,,/Resources/Images/icon.ico&quot; /&gt;
+                        &lt;hc:OutlineText
+                            Margin=&quot;3&quot;
+                            Fill=&quot;{DynamicResource PrimaryBrush}&quot;
+                            FontFamily=&quot;隶书&quot;
+                            FontSize=&quot;30&quot;
+                            FontWeight=&quot;Bold&quot;
+                            Stroke=&quot;PaleVioletRed&quot;
+                            StrokeThickness=&quot;2&quot;
+                            Text=&quot;登录&quot; /&gt;
+                    &lt;/StackPanel&gt;
+                    &lt;StackPanel HorizontalAlignment=&quot;Right&quot; Orientation=&quot;Horizontal&quot;&gt;
+                        &lt;Button
+                            Margin=&quot;3&quot;
+                            hc:BorderElement.CornerRadius=&quot;16&quot;
+                            hc:IconElement.Geometry=&quot;{StaticResource CloseGeometry}&quot;
+                            Click=&quot;ButtonClose_Click&quot;
+                            Style=&quot;{StaticResource ButtonPrimary}&quot; /&gt;
+                    &lt;/StackPanel&gt;
+                &lt;/DockPanel&gt;
+            &lt;/Grid&gt;
+            &lt;Grid Grid.Row=&quot;1&quot;&gt;
+                &lt;Grid.ColumnDefinitions&gt;
+                    &lt;ColumnDefinition Width=&quot;1.2*&quot; /&gt;
+                    &lt;ColumnDefinition Width=&quot;*&quot; /&gt;
+                &lt;/Grid.ColumnDefinitions&gt;
+                &lt;Grid Grid.Column=&quot;0&quot;&gt;
+                    &lt;Image
+                        Width=&quot;300&quot;
+                        Height=&quot;300&quot;
+                        hc:IconElement.Geometry=&quot;&quot;
+                        Source=&quot;pack://application:,,,/Resources/Images/login-box-bg.png&quot;
+                        Stretch=&quot;Fill&quot; /&gt;
+                &lt;/Grid&gt;
+                &lt;Grid Grid.Column=&quot;1&quot;&gt;
+                    &lt;StackPanel
+                        Width=&quot;250&quot;
+                        Margin=&quot;0,35,0,35&quot;
+                        HorizontalAlignment=&quot;Center&quot;
+                        Orientation=&quot;Vertical&quot;&gt;
+                        &lt;hc:OutlineText
+                            Margin=&quot;0,20,0,0&quot;
+                            HorizontalAlignment=&quot;Center&quot;
+                            Fill=&quot;{DynamicResource PrimaryBrush}&quot;
+                            FontFamily=&quot;隶书&quot;
+                            FontSize=&quot;30&quot;
+                            FontWeight=&quot;Bold&quot;
+                            Stroke=&quot;PaleVioletRed&quot;
+                            StrokeThickness=&quot;2&quot;
+                            Text=&quot;i采薇工具箱&quot; /&gt;
+                        &lt;hc:TextBox
+                            Name=&quot;Username&quot;
+                            Width=&quot;200&quot;
+                            Margin=&quot;0,20,0,0&quot;
+                            hc:InfoElement.Necessary=&quot;True&quot;
+                            hc:InfoElement.Placeholder=&quot;请输入用户名&quot;
+                            hc:InfoElement.ShowClearButton=&quot;True&quot; /&gt;
+                        &lt;hc:PasswordBox
+                            Width=&quot;200&quot;
+                            Margin=&quot;0,20,0,0&quot;
+                            hc:InfoElement.Necessary=&quot;True&quot;
+                            hc:InfoElement.Placeholder=&quot;请输入密码&quot;
+                            IsSafeEnabled=&quot;False&quot;
+                            ShowClearButton=&quot;True&quot;
+                            ShowEyeButton=&quot;True&quot;
+                            UnsafePassword=&quot;{Binding Path=Password, Mode=TwoWay}&quot; /&gt;
+                        &lt;Button
+                            Name=&quot;Login&quot;
+                            Width=&quot;200&quot;
+                            Margin=&quot;0,20,0,0&quot;
+                            Content=&quot;登    录&quot;
+                            IsDefault=&quot;True&quot;
+                            Style=&quot;{StaticResource ButtonPrimary}&quot; /&gt;
+                    &lt;/StackPanel&gt;
+                &lt;/Grid&gt;
+            &lt;/Grid&gt;
+        &lt;/Grid&gt;
+    &lt;/Border&gt;
+&lt;/hc:GlowWindow&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br></div></div><h2 id="loginview-xaml-cs"><a href="#loginview-xaml-cs" class="header-anchor">#</a> LoginView.xaml.cs</h2> <div class="language-c# line-numbers-mode"><pre class="language-text"><code>/// &lt;summary&gt;
+/// LoginView.xaml 的交互逻辑
+/// &lt;/summary&gt;
+public partial class LoginView
+{
+    public LoginView()
+    {
+        InitializeComponent();
+    }
+    private void ButtonClose_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
+    private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+    {
+        DragMove();
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div></div></div> <!----> <div class="page-edit"><!----> <div class="tags"><a href="/blog/tags/?tag=%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91" title="标签">#软件开发</a><a href="/blog/tags/?tag=WPF" title="标签">#WPF</a></div> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2023/10/18, 19:38:19</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/blog/soft/wpf/login/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">WPF增删改查08-登录实现</div></a> <a href="/blog/soft/wpf/publish/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">WPF增删改查10-发布</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/blog/soft/wpf/login/" class="prev">WPF增删改查08-登录实现</a></span> <span class="next"><a href="/blog/soft/wpf/publish/">WPF增删改查10-发布</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/blog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/blog/hardware/si/antenna/kuidian/"><div>
+            天线的馈电技术
+            <!----></div></a> <span class="date">06-29</span></dt></dl><dl><dd>02</dd> <dt><a href="/blog/hardware/si/phased-array/radar/"><div>
+            相控阵雷达天线
+            <!----></div></a> <span class="date">06-07</span></dt></dl><dl><dd>03</dd> <dt><a href="/blog/soft/springboot/use/rbac/"><div>
+            RBAC权限管理
+            <!----></div></a> <span class="date">03-31</span></dt></dl> <dl><dd></dd> <dt><a href="/blog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="https://github.com/icaiwei" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://gitee.com/icaiwei" title="Gitee" target="_blank" class="iconfont icon-gitee"></a><a href="https://www.ic-sugar.cn" title="网站首页" target="_blank" class="iconfont icon-rss"></a><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=476090432&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" class="iconfont icon-QQ"></a><a href="https://www.ic-sugar.cn/?contact=true" title="联系我" target="_blank" class="iconfont icon-youjian"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2023-2024
+    <span>i采薇 | blog<br> <a href="http://beian.miit.gov.cn/" target="_blank">备案</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <!----></div><div class="global-ui"><div></div><div></div><div></div><!----><div></div></div></div>
+    <script src="/blog/assets/js/app.696f2bc2.js" defer></script><script src="/blog/assets/js/3.523b71e1.js" defer></script><script src="/blog/assets/js/236.9bdf5497.js" defer></script><script src="/blog/assets/js/182.d518a632.js" defer></script><script src="/blog/assets/js/154.53998938.js" defer></script><script src="/blog/assets/js/158.b2e74827.js" defer></script>
+  </body>
+</html>
